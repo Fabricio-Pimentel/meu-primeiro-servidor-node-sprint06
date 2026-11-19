@@ -3,7 +3,7 @@ const app = express();
 const PORT = 3000
 
 //sprint 06 -----
-app.use (express.stack("public"))
+app.use (express.static("public"))
 
 // Rotas da Sprint 01 – continuam disponíveis.
 app.get("/", (req, res) => res.send("Servidor rodando! 🚀"));
@@ -38,7 +38,7 @@ app.get("/total-mensagens", async (req, res) => {
 });
 
 // sprint 5 ---------
-import { lerMensagens, salvarMensagens } from './store';
+import { lerMensagens, salvarMensagens } from './store.js';
 
 app.use(express.json())
 
