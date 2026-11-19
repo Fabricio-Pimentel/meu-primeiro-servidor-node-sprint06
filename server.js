@@ -2,7 +2,8 @@ import express from "express";
 const app = express();
 const PORT = 3000
 
-//sprint 1, 2, 3 e 4 -----------
+//sprint 06 -----
+app.use (express.stack("public"))
 
 // Rotas da Sprint 01 – continuam disponíveis.
 app.get("/", (req, res) => res.send("Servidor rodando! 🚀"));
@@ -38,6 +39,7 @@ app.get("/total-mensagens", async (req, res) => {
 
 // sprint 5 ---------
 import { lerMensagens, salvarMensagens } from './store';
+
 app.use(express.json())
 
 // Serializa gravações dentro deste único processo Node.js.
